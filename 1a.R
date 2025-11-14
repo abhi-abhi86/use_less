@@ -1,18 +1,19 @@
-v = 1:5
+v <- c(1,2,3)
+print("Vector:")
+print(v)
 
-m = matrix(1:6, nrow = 2)
+m <- matrix(c(1,2,3,4), nrow=2, ncol=2)
+print("Matrix:")
+print(m)
 
-l = list("apple", 10, v)
+l <- list("apple", 10, c(1,2))
+print("List:")
+print(l)
 
-df = data.frame(
-  Name = c("John", "Jane", "Tom"),
-  Age = c(25, 30, 35)
-)
+d <- data.frame(Name=c("jane", "Bob"), Age=c(19,20))
+print("Dataframe:")
+print(d)
 
-f = factor(c("dog", "cat", "dog", "cat", "dog1", "cat1"))
-
-print(paste("Vector:", paste(v, collapse = ", ")))
-print(paste("Matrix (2x3):")); print(m)
-print(paste("List:")); print(l)
-print(paste("Data Frame:")); print(df)
-print(paste("Factor:")); print(f)
+f <- factor(c("dog", "cat", "cat2", "dog1"))
+print("Factor:")
+print(f)
