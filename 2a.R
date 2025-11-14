@@ -1,11 +1,14 @@
-v <- 1:5
-m <- matrix(1:6, 2)
-l <- list("apple", 10, v)
-df <- data.frame(Name=c("John","Jane","Tom"), Age=c(25,30,35))
-f <- factor(c("dog","cat","dog","cat","dog1","cat1"))
+name = "hello"
+age = 25L
+pi_v = 3.14
+flag = TRUE
 
-print(paste("Vector:", paste(v, collapse=", ")))
-print(paste("Matrix (2x3):")); print(m)
-print(paste("List:")); print(l)
-print(paste("Data Frame:")); print(df)
-print(paste("Factor:")); print(f)
+unlockBinding("value", globalenv())
+value = 100
+lockBinding("value", globalenv())
+
+cat("Name:", name, "- Type:", typeof(name), "\n")
+cat("Age:", age, "- Type:", typeof(age), "\n")
+cat("Pi:", pi_v, "- Type:", typeof(pi_v), "\n")
+cat("Flag:", flag, "- Type:", typeof(flag), "\n")
+cat("Value:", value, "- Type:", typeof(value), "\n")
